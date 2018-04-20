@@ -1,0 +1,43 @@
+<view class='body'>
+
+  <!-- 顶部头像以及昵称 -->
+  <view class='top'>
+    <button wx:if="{{userInfo==null}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}_{{id}}</text>
+    </block>
+
+  </view>
+  <view class='fgx'></view>
+  <!-- 我的抢购 -->
+  <view class='my_sale'>
+    <text>我的抢购</text>
+  </view>
+  <view class='goods_list' wx:for="{{shopping_info}}" wx:key="navItems" wx:for-item="item" wx:for-index="idx">
+    <view class='goods'>
+      <view class='order_info'>
+        <view>订单号:{{shopping_info[idx].id}}
+        </view>
+        <view>商品编号:{{shopping_info[idx].seckill.seckillId}}
+        </view>
+      </view>
+      <view class='shopping_img'>
+        <image src="{{shopping_info[idx].seckill.url}}" mode="scaleToFill" style='height: 130rpx;width:130rpx'></image>
+      </view>
+      <view class='text-NI'>
+        <text class='shopping-name'>{{shopping_info[idx].seckill.name}}
+        </text>
+        <view>
+          <text class='current-price'>¥{{shopping_info[idx].seckill.createPrice}}</text>
+          <text class='pay'>{{shopping_info[idx].sta}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='text_info'>
+    <text>重要提示：
+      将“我的抢购”未付款页面与微信公众号支付交易记录截图
+    将两张照片发至微信公众号，客服小姐姐将帮您修改订单状态为“已支付”</text>
+  </view>
+</view>

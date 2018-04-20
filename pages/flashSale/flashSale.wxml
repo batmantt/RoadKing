@@ -1,0 +1,98 @@
+<view class='body'>
+  <view class='banner'>
+    <image src='https://www.promisem.cn/image/flashSale/banner_a.png' mode="scaleToFill" style='height: 360rpx;width: 750rpx'></image>
+  </view>
+  <!-- 商品 -->
+  <view class='goods_list'>
+    <view class='goods'>
+      <view class='shopping_img'>
+        <image wx:for="{{xjj_pictures}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage_xjj" mode="scaleToFill" style='height:190rpx;width:190rpx'></image>
+      </view>
+      <view class='shopping_info'>
+        <text class='shopping-name'>日本进口ROCKET洗洁精600ml</text>
+
+        <view class='text-progress'>
+          <text>共250件</text>
+          <view class='progress'>
+            <progress percent="{{number_xjj}}" stroke-width="8" activeColor="#F9D447" backgroundColor="#E5E5E5" />
+          </view>
+        </view>
+
+        <view class='text-time'>
+          <text class='text-tip'>{{distanceEndTime}}开始</text>
+        </view>
+
+        <!-------------------------- 修改价格------------------------------- -->
+
+        <view class='text-price'>
+          <text class='current-price'>¥4.90</text>
+          <text class='previous-prices'>-¥20</text>
+          <view class='xhx'></view>
+          <button wx:if="{{userInfo==null}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即抢购</button>
+          <button wx:elif="{{shopping_info}}==''" bindtap='Immediate_buy_xjj'>立即抢购</button>
+          <button wx:else="{{buyed}}==-2" bindtap='Immediate_buyed'>立即抢购</button>
+        </view>
+      </view>
+    </view>
+    <view class='goods'>
+<view class='shopping_img'>
+      <image wx:for="{{mm_pictures}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage_mm" mode="scaleToFill" style='height:190rpx;width:190rpx'></image>
+    </view>
+      <view class='shopping_info'>
+        <text class='shopping-name'>欧香雪焕颜亮肤补水面膜(5片装)</text>
+        <view class='text-progress'>
+          <text>共100件</text>
+          <view class='progress'>
+            <progress percent="{{number_mm}}" stroke-width="8" activeColor="#F9D447" backgroundColor="#E5E5E5" />
+          </view>
+        </view>
+
+        <view class='text-time'>
+          <text class='text-tip'>{{distanceEndTime1}}开始</text>
+        </view>
+
+        <!-------------------------- 修改价格------------------------------- -->
+
+        <view class='text-price'>
+          <text class='current-price'>¥14.9</text>
+          <text class='previous-prices'>¥100</text>
+          <view class='xhx'></view>
+          <button wx:if="{{userInfo==null}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即抢购</button>
+          <button wx:else="" bindtap='Immediate_buy_mm'>立即抢购</button>
+
+        </view>
+      </view>
+    </view>
+
+    <view class='goods'>
+      <view class='shopping_img'>
+      <image wx:for="{{xfs_pictures}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage_xfs" mode="scaleToFill" style='height:190rpx;width:190rpx'></image>
+    </view>
+      <view class='shopping_info'>
+        <text class='shopping-name'>韩国正品吕洗发水(400毫升)</text>
+
+        <view class='text-progress'>
+          <text>共50件</text>
+          <view class='progress'>
+            <progress percent="{{number_xfs}}" stroke-width="8" activeColor="#F9D447" backgroundColor="#E5E5E5" />
+          </view>
+        </view>
+
+        <view class='text-time'>
+          <text class='text-tip'>{{distanceEndTime2}}开始</text>
+        </view>
+
+        <!-------------------------- 修改价格------------------------------- -->
+
+        <view class='text-price'>
+          <text class='current-price'>¥24.9</text>
+          <text class='previous-prices'>¥100</text>
+          <view class='xhx'></view>
+
+        </view>
+        <button wx:if="{{userInfo==null}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即抢购</button>
+        <button wx:else="" bindtap='Immediate_buy_xfs'>立即抢购</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+.prize_info_text {
+  color: #333;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+  letter-spacing: 2rpx;
+  font-weight: 500;
+}
+
+.prize_img_face {
+  margin-top: 10rpx;
+}
+
+.prize_img_back {
+  margin-top: 10rpx;
+}
+
+.prize_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tack_ticket_tip {
+  color: #777bdb;
+  font-size: 26rpx;
+  font-weight: 600;
+  /* border-bottom: 3rpx solid #777bdb; */
+  margin-left: 40rpx;
+  letter-spacing: 2rpx;
+}
+
+.tick_use_info {
+  color: #999;
+  font-size: 20rpx;
+  margin-left: 40rpx;
+  font-weight: 600;
+}
+
+.content_tip {
+  width: 90%;
+  color: #999;
+  font-size: 20rpx;
+  letter-spacing: 3rpx;
+  margin: 0 auto;
+}

@@ -1,0 +1,39 @@
+<view>
+  <view>
+    <text class='prize_info_text'>奖品券介绍</text>
+  </view>
+  <view class='prize_img'>
+
+    <view class='prize_img_face'>
+      <image wx:for="{{pictures_face}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage_face" mode="scaleToFill" style='height:280rpx;width:664rpx'></image>
+    </view>
+
+    <view class='prize_img_back'>
+      <image wx:for="{{pictures_back}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage_back" mode="scaleToFill" style='height:280rpx;width:664rpx'></image>
+    </view>
+  </view>
+  <view>
+    <text decode="{{true}}" class='tack_ticket_tip'>累计7天签到，可获赠儿童主题探险体验学堂—MEWE
+    &nbsp;&nbsp;&nbsp;&nbsp;创世界亲子兑换券1张。凭电子兑换券，至路劲又一城2
+    &nbsp;&nbsp;&nbsp;&nbsp;楼MEWE创世界售票处登记兑换。</text>
+  </view>
+  <view>
+    <text class='tick_use_info'>免费体验卷使用说明</text>
+  </view>
+  <view>
+    <view class='content_tip'>
+      <text decode="{{true}}">
+  1.此券为一名成人及儿童周二至周五使用，入场前须至售票中心
+  &nbsp;&nbsp;兑换入场券进场。
+  2.此券为单场票，限体验一场，不退票，不改签，遗失不补，过\n&nbsp;&nbsp;期作废。
+  3.周一场馆公休（设备维护，场馆清洁）,不可使用。
+  4.请您提前一天预约，预约是否成功以售票中心确认为准，未预\n&nbsp;&nbsp;约直接到店，售票中心有权不接受。
+  5.办理会员卡给您带来价格上的优惠，并可以参加会员专属活动,
+  &nbsp;&nbsp;享受会员福利。
+  6.请在有效时间内使用，过期作废，盖章有效。
+  7.此券仅限在苏州路劲又一城创世界使用。
+  </text>
+    </view>
+
+  </view>
+</view>

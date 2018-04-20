@@ -1,0 +1,112 @@
+<view class="body">
+  <view class='top'>
+
+    <!-- 顶部文字左侧 -->
+    <view class='top_text_left'>
+      <view class='top_text'>
+
+        <!-- 签到统计天数 -->
+        <view class='total_days'>{{calendarSignDay}}</view>
+        <text>天</text>
+      </view>
+
+      <!-- <连续签到>文本 -->
+      <view class='continuous_check_in'>
+        <text>连续签到</text>
+      </view>
+    </view>
+
+    <!-- 顶部文字左侧 -->
+    <view wx:if="{{date!=calendarSignData[date]}}" class='top_text_right'>
+      <text>未签到</text>
+    </view>
+    <view wx:else="" class='top_text_right'>
+      <text>已签到</text>
+    </view>
+  </view>
+
+  <!-- 中间日历 -->
+  <view class='middle_all'>
+
+    <!-- 最底层的div -->
+    <view class='bottom'></view>
+    <view class='middle'></view>
+    <view class='topmost'>
+
+      <!-- ********************日历正文 ******************* -->
+      <view class='calendar_area'>
+        <view class="calendar">
+          <view class="weekName">
+            <view class="sunday">日</view>
+            <view class="monday">一</view>
+            <view class="tuesday">二</view>
+            <view class="wednesday">三</view>
+            <view class="thursday">四</view>
+            <view class="friday">五</view>
+            <view class="saturday">六</view>
+          </view>
+          <view class='fgx'>
+          </view>
+          <view class="week">
+
+            <!--填补空格-->
+            <!-- <view wx:for="{{nbsp}}">\n</view>  -->
+
+            <!--开始循环日期-->
+            <view wx:for="{{date-1}}" wx:key="navItems" style="width:87rpx;height: 87rpx;color:gainsboro;">
+              <text wx:if="{{item+1==calendarSignData[item+1]}}" style="color:#ffffff;font-size:28rpx;border-radius:50%;background-color:#F8D447">{{item+1}}</text>
+              <text wx:else="" style="width:87rpx;height: 87rpx;">{{item+1}}</text>
+            </view>
+            <view style="width:87rpx;height: 87rpx;">
+              <text wx:if="{{calendarSignDay==7}}" style="color:#ffffff;font-size:28rpx;  border-radius:50%;background-color:#EA534A">{{date}}</text>
+              <text wx:elif="{{date==calendarSignData[date]}}" style="color:#ffffff;font-size:28rpx;  border-radius:50%;background-color:#F8D447">{{date}}</text>
+              <text wx:else="" style="color:blue;">{{date}}</text>
+            </view>
+            <view style="width:87rpx;height: 87rpx;" wx:for="{{monthDaySize-date}}" wx:key="navItems">{{item+date+1}}</view>
+          </view>
+        </view>
+
+        <!-- 公众号二维码 -->
+        <view class='cr_code'>
+          <image wx:for="{{pictures}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage" style='width: 100rpx;height:100rpx; ' mode="scaleToFill"></image>
+        </view>
+
+      </view>
+      <view class="tip">
+        <text class='tip_text ' bindtap='prizeAge'>点击了解活动详情和MEWE创世界</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 点击按钮以及LOGO -->
+  <view>
+    <view class='btn_border '>
+      <button id='btn_login' wx:if="{{userInfo==null}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录签到 </button>
+      <view wx:elif="{{date!=calendarSignData[date]&&calendarSignDay<7}}" class='btn_image'>
+        <image src='https://www.promisem.cn/image/sign/no_sign.png ' mode="scaleToFill" style='height: 232rpx;width:232rpx ' bindtap="calendarSign"></image>
+      </view>
+      <view wx:else="" class='btn_image '>
+        <image src='https://www.promisem.cn/image/sign/signed.png ' mode="scaleToFill" style='height: 232rpx;width:232rpx ' bindtap='repeat_s'></image>
+      </view>
+    </view>
+     <view class='mewe_logo '>
+      <image src='https://www.promisem.cn/image/sign/mewe_logo.png ' mode="scaleToFill" style='height: 80rpx;width:80rpx '></image>
+    </view>
+    <view class='logo '>
+      <image src='https://www.promisem.cn/image/sign/rk_logo.jpg ' mode="scaleToFill" style='height: 119rpx;width:136rpx '></image>
+    </view>
+  </view>
+
+  <!-- 签满7天图片弹框 -->
+
+  <view class='modal-image-text' wx:if="{{calendarSignDay==7}}">
+    <view class='modal-mask'>
+      <view class='modal-mask-bh'>
+        <text>恭喜您获得兑换券 编号：{{sigId}}</text>
+      </view>
+      <view class='card_pictures_shadow'>
+        <image wx:for="{{card_pictures}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage_card" style='height:280rpx;width:664rpx;' mode="scaleToFill"></image>
+      </view>
+    </view>
+  </view>
+</view>

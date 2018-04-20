@@ -1,0 +1,267 @@
+.body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #5b5fc0;
+  font-size: 30rpx;
+}
+
+.top {
+  height: 200rpx;
+  width: 90%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  /* background-color: rosybrown; */
+  margin: 0 auto;
+  justify-content: space-between;
+  font-weight: 500;
+  font-style: PingFang-sc;
+  letter-spacing: 5rpx;
+}
+
+.top_text_left {
+  width: 200rpx;
+  margin-top: 70rpx;
+  margin-left: 40rpx;
+  /* background-color: bisque; */
+  font-weight: 500;
+}
+
+.top_text {
+  display: flex;
+  flex-direction: row;
+  line-height: 50%;
+  margin-left: 23rpx;
+  /* background-color: darkgray; */
+}
+
+.total_days {
+  height: 50rpx;
+  margin-top: -10rpx;
+  font-size: 70rpx;
+  /* font-family:"微软雅黑"; */
+  margin-right: 10rpx;
+}
+
+.top_text_right {
+  margin-top: 85rpx;
+  width: auto;
+  margin-right: 40rpx;
+  /* background-color: red; */
+}
+
+.middle_all {
+  height: 78%;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.bottom {
+  width: 75%;
+  height: 90%;
+  background-color: #fff;
+  border-radius: 3%;
+  position: relative;
+  bottom: -9%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0rpx 10rpx 15rpx 5rpx #e5e5e5 inset;
+}
+
+.middle {
+  width: 86%;
+  height: 95%;
+  border-radius: 3%;
+  position: relative;
+  bottom: 89%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0rpx 10rpx 15rpx 5rpx #e5e5e5 inset;
+}
+
+.topmost {
+  width: 95%;
+  height: 95%;
+  border-radius: 3%;
+  position: relative;
+  bottom: 188%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+/* <!-- 点击按钮以及LOGO --> */
+
+.btn_border {
+  width: 300rpx;
+  height: 300rpx;
+  background-color: #5b5fc0;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  bottom: 71%;
+  margin-left: 30%;
+}
+
+.btn_image {
+  width: 232rpx;
+  height: 232rpx;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.mewe_logo {
+  display: flex;
+  position: absolute;
+  bottom: 73%;
+  margin-left: 8%;
+}
+
+.logo {
+  display: flex;
+  position: absolute;
+  bottom: 71%;
+  margin-left: 74%;
+}
+
+.topmost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar_area {
+  height: 90%;
+  width: 90%;
+}
+
+.tip {
+  margin-top: 5rpx;
+}
+
+.tip_text {
+  color: #777bdb;
+  font-size: 26rpx;
+  font-weight: 500;
+  letter-spacing: 2rpx;
+  border-bottom: 2rpx solid #777bdb;
+}
+
+/* <!-- *********************************************** --> */
+
+/* <!-- *********************************************** --> */
+
+/* <!-- *********************************************** --> */
+
+.t_red {
+  color: red;
+}
+
+.t_blue {
+  color: royalblue;
+}
+
+.calendar {
+  margin: 0 1vw;
+}
+
+.time {
+  padding: 16rpx 20rpx;
+  background-color: white;
+  display: flex;
+}
+
+.time view {
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.time view text {
+  font-size: 38rpx;
+}
+
+.weekName {
+  margin-top: 160rpx;
+  width: 100%;
+  display: flex;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.weekName view {
+  flex: 1;
+  text-align: center;
+}
+
+.sunday, .saturday {
+  color: red;
+}
+
+.week {
+  width: 100%;
+}
+
+.week view {
+  width: 14.2%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: inline-block;
+  margin: 10rpx 0;
+  text-align: center;
+}
+
+.week view text {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+/* **********************************************************/
+
+.fgx {
+  margin-top: 30rpx;
+  height: 1rpx;
+  width: 90%;
+  margin-left: 30rpx;
+  border-bottom: 1rpx dashed;
+}
+
+/* 图片弹框 */
+
+.modal-mask {
+  height: auto;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  bottom: 38%;
+  justify-content: space-between;
+}
+
+.modal-mask-bh {
+  color: #5b5fc0;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+/* 登录按钮 */
+
+#btn_login {
+  width: 232rpx;
+  height: 232rpx;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 232rpx;
+}
+
+.cr_code {
+  margin-left: 500rpx;
+  margin-top: -140rpx;
+}
